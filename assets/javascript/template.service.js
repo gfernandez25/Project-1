@@ -100,7 +100,7 @@ function _buildCard(daily, i) {
       .append("Humidity: ", data.humidity, " %")
 
   return $("<div />")
-      .addClass("weather weather-display-card")
+      .addClass("card forecast-weather-card")
       .append(date, icon, temp, wind, humidity)
 }
 
