@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -25,18 +25,81 @@
 <main class="event-finder grid grid-cols-7 gap-2">
     <h1 class="event-finder-header col-span-7 font-bold text-center text-4xl text-blue-500"> Event Finder</h1>
 
-    <section class="event-finder-search col-span-7 text-center text-3xl space-x-2" >
+    <section class="event-finder-search col-span-7 text-center text-3xl space-x-2">
         <label class="event-finder-label">Enter a City to find events</label>
         <input class="event-finder-input focus:shadow-outline py-1" type="text">
-        <button class="event-finder-btn text-center text-white-500 bg-red-500 hover:bg-blue-600 rounded-lg px-2 py-2"> Search</button>
+        <button class="event-finder-btn text-center text-white-500 bg-red-500 hover:bg-blue-600 rounded-lg px-2 py-2">
+            Search
+        </button>
     </section>
 
     <aside class="past-searches grid gap-2 col-span-7 row-span-2 sm:col-span-2">
         <h2>Previous Searches</h2>
     </aside>
-
+<!--merged from luis-->
     <section class="events-display col-span-7 sm:col-span-5">
         <h2> Events in the selected area</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div id='events-panel' class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Events</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="events" class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <h4 class="list-group-item-heading">Event title</h4>
+                                    <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p class="venue"></p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <h4 class="list-group-item-heading">Event title</h4>
+                                    <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p class="venue"></p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <h4 class="list-group-item-heading">Event title</h4>
+                                    <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p class="venue"></p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <h4 class="list-group-item-heading">Event title</h4>
+                                    <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p class="venue"></p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <nav>
+                                <ul class="pager">
+                                    <li id="prev" class="previous"><a href="#"><span
+                                            aria-hidden="true">&larr;</span></a></li>
+                                    <li id="next" class="next"><a href="#"><span aria-hidden="true">&rarr;</span></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div id='attraction-panel' class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Attraction</h3>
+                        </div>
+                        <div id="attraction" class="panel-body">
+                            <h4 class="list-group-item-heading">Attraction title</h4>
+                            <img class="col-xs-12" src="">
+                            <p id="classification"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </section>
 
@@ -45,21 +108,22 @@
     </section>
 
 
-
-
-    <!--<div class="container">
-        <img class="icon"></img>
-        <div class="weather"></div>
-        <div class="temp"></div>
-        <div class="events"></div>
-    </div>-->
 </main>
 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+<script src="assets/javascript/js.js"></script>
+
+<!--Guillermo Added these for weather functionality-->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="assets/javascript/localStorage.service.js"></script>
 <script src="assets/javascript/openWeather.service.js"></script>
 <script src="assets/javascript/template.service.js"></script>
 <script src="assets/javascript/main.js"></script>
-</body>
 
+</body>
 </html>
