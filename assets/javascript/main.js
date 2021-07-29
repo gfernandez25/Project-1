@@ -1,7 +1,7 @@
 (async function ($) {
     getCityWeather("Miami");
 
-    $(".event-finder-search")
+    $(".event-finder")
         .on("click", ".event-finder-btn", "", function ($event) {
             var searchInputValue = $(".event-finder-input").val()
 
@@ -15,6 +15,8 @@
         })
        .on("click", ".past-search-btn", "", function ($event) {
             getCityWeather($(this).html())
+           console.log(getCityWeather($(this).html()))
+
         })
 })(jQuery);
 
