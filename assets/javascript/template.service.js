@@ -6,7 +6,7 @@ templateService.buildPastSearches = function (query) {
           .addClass("past-search-btn col-span-6 btn text-center bg-grey-500 hover:bg-blue-600 rounded-lg px-2 py-2")
           .html(query)
 
-  return $(".past-searches")
+  return $(".past-searches-header")
       .append(pastSearches)
 }
 
