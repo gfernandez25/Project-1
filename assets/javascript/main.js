@@ -16,7 +16,6 @@
        .on("click", ".past-search-btn", "", function ($event) {
             getCityWeather($(this).html())
 
-           //$(".event-finder-input").
         })
 })(jQuery);
 
@@ -28,8 +27,14 @@ async function getCityWeather(query) {
 
     //todo: replace search bar html with past city search
 
-
     console.log(city.name)
+/*
+    $(document).click(function(event) {
+        var text = $(event.target);
+        console.log(text)
+    });*/
+
+    $(".event-finder-input").val(city.name);
 
     //templateService.buildCurrentWeather(weatherData.current, city);
     templateService.getCityWeather5DayForecast(weatherData.forecast5Days)
