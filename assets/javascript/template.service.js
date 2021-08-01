@@ -1,5 +1,10 @@
 var templateService = {}
 
+templateService.buildForecastHeader = function(query) {
+   return $(".weather-display-header")
+       .html("Weather in " + query.toUpperCase() + " during event")
+}
+
 templateService.buildPastSearches = function (query) {
   var pastSearches =
       $("<button />")

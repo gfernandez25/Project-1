@@ -16,8 +16,13 @@ function getEvents(page) {
   
   $.ajax({
     type:"GET",
-    url:"https://app.ticketmaster.com/discovery/v2/events.json?apikey=pLOeuGq2JL05uEGrZG7DuGWu6sh2OnMz&size=4&page="+page,
+    url:"https://app.ticketmaster.com/discovery/v2/events.json",
     async:true,
+    data: {
+      apikey:"pLOeuGq2JL05uEGrZG7DuGWu6sh2OnMz",
+      size:4,
+      page:page,
+    },
     dataType: "json",
     success: function(json) {
           getEvents.json = json;
@@ -67,7 +72,11 @@ $("#next").click(function() {
 function getAttraction(id) {
   $.ajax({
     type:"GET",
-    url:"https://app.ticketmaster.com/discovery/v2/attractions/"+id+".json?apikey=pLOeuGq2JL05uEGrZG7DuGWu6sh2OnMz",
+    url:"https://app.ticketmaster.com/discovery/v2/attractions/"+id+".json?",
+    data: {
+      apikey:"pLOeuGq2JL05uEGrZG7DuGWu6sh2OnMz",
+      keyword: "miami"
+    },
     async:true,
     dataType: "json",
     success: function(json) {
