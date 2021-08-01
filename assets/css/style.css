@@ -6,33 +6,37 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.event-finder-header{
+.event-finder-header {
     border: 1px solid;
     background: rebeccapurple;
 }
 
-.event-finder-search{
+.event-finder-search {
     border: 1px solid;
     background: orange;
     height: auto;
 }
 
-.past-searches{
+.past-searches {
     border: 1px solid;
     background: greenyellow;
 }
 
-.events-display{
+.past-search-btn {
+    text-transform: capitalize;
+}
+
+.events-display {
     border: 1px solid;
     background: aqua;
 }
 
-.weather-display{
+.weather-display {
     border: 1px solid;
     background: crimson;
 }
 
-.weather .weather-display{
+.weather .weather-display {
     background: #374659;
     color: white;
     padding: 5px;
@@ -52,3 +56,4 @@
 .line {
     border-bottom: 2px solid black;
 }
+

@@ -25,8 +25,6 @@ async function getCityWeather(query) {
 
     console.log(weatherData);
 
-    //todo: replace search bar html with past city search
-
     console.log(city.name)
 /*
     $(document).click(function(event) {
@@ -43,7 +41,7 @@ async function getCityWeather(query) {
 function getPastSearches(key) {
     var pastSearches = localStorageService.getLocalStorage(key, 'array')
 
-    $(".past-searches .past-search-btn").remove();
+    //$(".past-searches .past-search-btn").remove();
 
     for (var i = 0; i < pastSearches.length; i++) {
         templateService.buildPastSearches(pastSearches[i])
