@@ -7,19 +7,21 @@
 
             if (searchInputValue !== "") {
                 var pastSearches = localStorageService.getLocalStorage("passedSearches", 'array')
+
+                pastSearches = pastSearches.slice(-9)
                 pastSearches
                     .push(searchInputValue.toLowerCase())
                 localStorageService.setLocalStorage("passedSearches", [...new Set(pastSearches)])
                 getPastSearches("passedSearches");
                 getCityWeather(searchInputValue)
-                templateService.buildForecastHeader(searchInputValue)
+                getEvents(page)
             }
         })
-       .on("click", ".past-search-btn", "", function ($event) {
+        .on("click", ".past-search-btn", "", function ($event) {
             getCityWeather($(this).html())
-           var searchInputValue = $(this).html();
-           templateService.buildForecastHeader(searchInputValue)
-
+            var searchInputValue = $(this).html();
+            templateService.buildForecastHeader(searchInputValue)
+            getEvents(page)
         })
 })(jQuery);
 
@@ -27,19 +29,9 @@ async function getCityWeather(query) {
     var city = await openWeather.getCity(query);
     var weatherData = await openWeather.getWeather(city)
 
-    console.log(weatherData);
-
-    console.log(city.name)
-/*
-    $(document).click(function(event) {
-        var text = $(event.target);
-        console.log(text)
-    });*/
-
     $(".event-finder-input").val(city.name);
 
-
-    //templateService.buildCurrentWeather(weatherData.current, city);
+    templateService.buildForecastHeader(city.name)
     templateService.getCityWeather5DayForecast(weatherData.forecast5Days)
 }
 

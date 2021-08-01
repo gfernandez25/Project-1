@@ -2,7 +2,7 @@ var templateService = {}
 
 templateService.buildForecastHeader = function(query) {
    return $(".weather-display-header")
-       .html("Weather in " + query.toUpperCase() + " during event")
+       .html("Weather in " + query + " during event")
 }
 
 templateService.buildPastSearches = function (query) {
@@ -76,7 +76,7 @@ templateService.getCityWeather5DayForecast = function (data) {
 
 function _buildCard(daily, i) {
   var date = new Date();
-  date.setDate(date.getDate() + i + 1);
+  date.setDate(date.getDate() + i);
 
   var data = {
     date: date.toLocaleDateString('en-US'),
