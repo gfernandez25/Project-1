@@ -7,19 +7,20 @@
 }
 
 .event-finder-header {
-    border: 1px solid;
-    background: rebeccapurple;
+    /*border: 1px solid;*/
+    /*background: rebeccapurple;*/
 }
 
 .event-finder-search {
     border: 1px solid;
-    background: orange;
+    /*background: orange;*/
     height: auto;
 }
 
 .past-searches {
     border: 1px solid;
-    background: greenyellow;
+    padding: 0 5px;
+    /*background: greenyellow;*/
 }
 
 .past-search-btn {
@@ -28,22 +29,24 @@
 
 .events-display {
     border: 1px solid;
-    background: aqua;
+    /*background: aqua;*/
 }
 
 .weather-display {
     border: 1px solid;
-    background: crimson;
+    grid-gap: 10px;
+    /*background: crimson;*/
 }
 
 .weather-display .weather-display-header {
     text-transform: capitalize;
 }
 
-.weather .weather-display {
+.forecast-weather-card {
     background: #374659;
     color: white;
     padding: 5px;
+    border-radius: 20px;
 }
 
 .btn {
