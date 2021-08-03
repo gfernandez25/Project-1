@@ -1,12 +1,17 @@
 var templateService = {}
 
+templateService.buildForecastHeader = function(query) {
+   return $(".weather-display-header")
+       .html("Weather in " + query + " during event")
+}
+
 templateService.buildPastSearches = function (query) {
   var pastSearches =
       $("<button />")
           .addClass("past-search-btn col-span-6 btn text-center bg-grey-500 hover:bg-blue-600 rounded-lg px-2 py-2")
           .html(query)
 
-  return $(".past-searches")
+  return $(".past-searches-header")
       .append(pastSearches)
 }
 
@@ -71,7 +76,7 @@ templateService.getCityWeather5DayForecast = function (data) {
 
 function _buildCard(daily, i) {
   var date = new Date();
-  date.setDate(date.getDate() + i + 1);
+  date.setDate(date.getDate() + i);
 
   var data = {
     date: date.toLocaleDateString('en-US'),
